@@ -1,0 +1,54 @@
+{
+  "environment": "Brev / Ubuntu 22.04 or 24.04 / x86_64 / NVIDIA CUDA GPU",
+  "nvidia_driver": "Supplied by GPU VM provider; do not overwrite",
+  "container": "nvcr.io/nvidia/isaac-sim:5.0.0",
+  "compute_smoke_container": "nvcr.io/nvidia/cuda:12.8.0-base-ubuntu24.04",
+  "runtime": "NVIDIA Container Toolkit + Docker Engine",
+  "source": {
+    "url": "https://github.com/ucla-mobility/TIC-VLA.git",
+    "commit": "9fa6f8b66b9e121d5df5df071297bba8e5353ebb"
+  },
+  "python": {
+    "interpreter": "/isaac-sim/python.sh",
+    "install": [
+      "protect_runtime.py --write /tmp/ticvla-runtime-constraints.txt",
+      "pip install -c /tmp/ticvla-runtime-constraints.txt -e .",
+      "pip install -c /tmp/ticvla-runtime-constraints.txt -r requirements-test.txt",
+      "protect_runtime.py --verify /tmp/ticvla-runtime-constraints.txt"
+    ],
+    "training_dependencies_installed": false,
+    "host_huggingface_hub": "0.36.0",
+    "numpy_required": ">=1.26,<2",
+    "container_system_packages": [
+      "git",
+      "ca-certificates",
+      "procps",
+      "util-linux"
+    ],
+    "critical_pins": {
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "huggingface-hub": "0.36.0",
+      "transformers": "4.57.1"
+    },
+    "other_dependencies": "Resolved within upstream testing bounds; installed versions saved to trial4_pip_freeze.txt. Not a fully offline wheel lock."
+  },
+  "base_model": {
+    "repo": "OpenGVLab/InternVL3-1B",
+    "revision": "4415a3b810e636d11dfa86b0e9ba40bb00535aa8"
+  },
+  "checkpoint": {
+    "repo": "handsomeYun/TIC-VLA",
+    "repo_type": "dataset",
+    "revision": "f27fa2f85aa205098080c53bb1272e987e2c1a25",
+    "filename": "TIC-VLA-model.ckpt",
+    "sha256": "376263f89fad0f42c267d85655019232edc91d36e214e23424804dd4cd42e036"
+  },
+  "large_assets_not_inside_small_zip": [
+    "Isaac Sim OCI image",
+    "InternVL model weights",
+    "TIC-VLA checkpoint",
+    "Isaac remote USD dependencies"
+  ],
+  "full_offline_bundle_script": "build_offline_bundle.sh"
+}

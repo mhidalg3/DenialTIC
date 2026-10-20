@@ -1,0 +1,23 @@
+{
+  "bundle": "TICVLA-Trial5 five-arm emulation prototype",
+  "study_manifest_sha256": "f289fac66f5ac5261849b23e1804e75d1de1f8892dbe69633d549f03f01de671",
+  "study_episode_ids": 40,
+  "route_families": 20,
+  "episode_seed_units": 200,
+  "stochastic_repeats_per_unit_arm": 2,
+  "arms": 5,
+  "planned_rollouts": 2000,
+  "checked": [
+    "6 core local mock scheduler/admission tests",
+    "mock upgrade dry+apply and hashes",
+    "10-unit runner dry-run resulting 100 randomized jobs",
+    "analysis script synthetic fixture"
+  ],
+  "not_yet_verified": [
+    "NVIDIA L40S GPU rollout",
+    "exact same realized VLM completion trace across accept/drop",
+    "actual GPU-work-matched flat load",
+    "fresh/oracle KV condition",
+    "full Isaac simulator state restoration branch replay"
+  ]
+}

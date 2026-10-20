@@ -1,0 +1,60 @@
+============================================================
+BENCHMARK RESULTS SUMMARY
+============================================================
+
+Timestamp: 2026-10-15 04:05:03
+Config File: /workspace/TIC-VLA/DynaNav/configs/dod_pilot.yaml
+
+AGGREGATE METRICS
+------------------------------------------------------------
+Total Episodes: 4
+Successful: 2
+Failed: 2
+Success Rate (SR): 50.0%
+Average Navigation Error (NE): 8.61m
+Total Collision Rate (human OR physical): 25.0%
+Human Collision Rate: 0.0%
+Physical Contact Rate: 25.0%
+Average Success weighted by Path Length: 0.500
+Average Path Length: 26.93m
+Average Simulation Duration: 53.26s (1598 frames)
+
+DETAILED EPISODE RESULTS
+------------------------------------------------------------
+
+episode_1: ✓ SUCCESS | ✓ NO COLLISION  (18.5s, 554 frames)
+  Scene: hospital.usd
+  Robot: nova_carter
+  Instruction: Go straight ahead and stop at the vending machine at front.
+  Navigation Error: 1.49m
+  Success Rate: 1.000
+  Success weighted by Path Length: 1.000
+  Path Length: 12.11m
+
+episode_27: ✗ FAILED | ⚠ COLLISION ⚠ PHYS (60.0s, 1800 frames)
+  Scene: office.usd
+  Robot: nova_carter
+  Instruction: Go straight ahead and stop at the nearest elevator.
+  Navigation Error: 10.79m
+  Success Rate: 0.000
+  Success weighted by Path Length: 0.000
+  Path Length: 28.33m
+
+episode_51: ✓ SUCCESS | ✓ NO COLLISION  (24.6s, 737 frames)
+  Scene: outdoor_small.usd
+  Robot: nova_carter
+  Instruction: Go straight until reach the black and white striped umbrellas.
+  Navigation Error: 3.99m
+  Success Rate: 1.000
+  Success weighted by Path Length: 1.000
+  Path Length: 16.13m
+
+episode_65: ✗ FAILED | ✓ NO COLLISION  (110.0s, 3300 frames)
+  Scene: full_warehouse.usd
+  Robot: nova_carter
+  Instruction: Proceed to the yellow forklift at the entrance of Aisle 06 (the first aisle from the right).
+  Navigation Error: 18.17m
+  Success Rate: 0.000
+  Success weighted by Path Length: 0.000
+  Path Length: 51.16m
+

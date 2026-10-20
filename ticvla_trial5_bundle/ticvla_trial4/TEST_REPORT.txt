@@ -1,0 +1,45 @@
+TRIAL 4 LOCAL VALIDATION — 2026-10-16
+
+Command:
+  python -m unittest discover -s tests -v
+
+Result:
+  Ran 45 tests
+  OK (no skipped tests in the package-root local run)
+
+Coverage:
+- Settings prohibit a nonzero freshness deadline and prohibit frozen-bootstrap mode.
+- Old completed KV caches are accepted; response/provenance advance together.
+- No-KV sends None to the actual dummy Action Expert while shadow computation remains.
+- Source images survive deletion/overwrite of the rolling-buffer originals.
+- Frame-based FIFO arrivals are independent of benign request submission.
+- The default burst profile with a mock VLM service produces late caches that are
+  actually consumed, followed by accepted/consumed lower-latency updates.
+- Source-frame and pose consistency, quantized delay-input recording, cancellation
+  and outstanding-at-termination accounting.
+- Observed crowd motion/proximity counters.
+- Exactly three matched conditions and five selected episode IDs (15 rollouts).
+- Automatic invalidation of stale/forced drops, missing publications or no-KV leaks.
+- Combined disjoint-session summaries, duplicate-run rejection and no spurious
+  confidence interval with a single repeat.
+- Installer AST/anchor fixtures, native binary-stack protection, host/container
+  test separation, Git installation inside Docker, noninteractive sudo.
+- Bash syntax and bootstrap --plan.
+
+Additional package checks:
+- Every Python source compiled locally without import execution.
+- Every shell script passed bash -n.
+- verify_package.py validates SHA256SUMS.json after extraction.
+- ZIP CRC integrity checked after archive creation.
+
+NOT VALIDATED HERE:
+- A full fresh Ubuntu/Brev provisioning.
+- Isaac Sim startup with these exact newly resolved dependencies.
+- Checkpoint loading and a real L40S Action Expert invocation.
+- The five selected crowded Isaac scenes or any navigation failure claim.
+- Exact native timing, asset availability or complete dependency-wheel offline lock.
+
+The installer checks the real pinned checkout's source anchors before edits.
+The first three episode rollouts are the required on-VM end-to-end check and
+are counted within the 15-rollout pilot budget. Passing CPU tests does not
+establish GPU, physics or closed-loop navigation correctness.

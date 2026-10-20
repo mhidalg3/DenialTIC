@@ -1,0 +1,136 @@
+{
+  "timestamp": "20261013_223838",
+  "config_file": "/workspace/TIC-VLA/DynaNav/configs/dod_pilot.yaml",
+  "total_episodes": 4,
+  "successful_episodes": 2,
+  "failed_episodes": 2,
+  "success_rate_percent": 50.0,
+  "average_metrics": {
+    "navigation_error_m": 5.618277591106729,
+    "total_collision_rate_percent": 50.0,
+    "human_collision_rate_percent": 25.0,
+    "physical_contact_rate_percent": 25.0,
+    "spl": 0.5,
+    "path_length_m": 29.4563291636078,
+    "duration_s": 52.975,
+    "duration_frames": 1589.25
+  },
+  "episodes": [
+    {
+      "episode": "episode_1",
+      "scene": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Hospital/hospital.usd",
+      "start": [
+        -3.0,
+        -1.2,
+        0.01
+      ],
+      "goal": [
+        9.52,
+        2.33,
+        0.01
+      ],
+      "instruction": "Go straight ahead and stop at the vending machine at front.",
+      "timeout": 40,
+      "robot_type": "nova_carter",
+      "success": true,
+      "duration": 18.5,
+      "duration_frames": 555,
+      "navigation_error": 1.4874249563197923,
+      "success_rate": 1.0,
+      "collision": 0.0,
+      "human_collision": 0.0,
+      "physical_collision": 0.0,
+      "spl": 1.0,
+      "path_length": 12.128926325699053,
+      "physical_collision_detected": false,
+      "physical_collision_count": 0
+    },
+    {
+      "episode": "episode_27",
+      "scene": "/workspace/TIC-VLA/DynaNav/assets/office.usd",
+      "start": [
+        -2.85,
+        9.6,
+        0.01
+      ],
+      "goal": [
+        -13.4,
+        -1.2,
+        0.01
+      ],
+      "instruction": "Go straight ahead and stop at the nearest elevator.",
+      "timeout": 60,
+      "robot_type": "nova_carter",
+      "success": false,
+      "duration": 60.0,
+      "duration_frames": 1800,
+      "navigation_error": 10.732988298592833,
+      "success_rate": 0.0,
+      "collision": 1.0,
+      "human_collision": 0.0,
+      "physical_collision": 1.0,
+      "spl": 0.0,
+      "path_length": 28.366178041626082,
+      "physical_collision_detected": true,
+      "physical_collision_count": 156
+    },
+    {
+      "episode": "episode_51",
+      "scene": "/workspace/TIC-VLA/DynaNav/assets/outdoor_small.usd",
+      "start": [
+        26.9,
+        148.8,
+        6.85
+      ],
+      "goal": [
+        9.39,
+        154.52,
+        5.97
+      ],
+      "instruction": "Go straight until reach the black and white striped umbrellas.",
+      "timeout": 100,
+      "robot_type": "nova_carter",
+      "success": true,
+      "duration": 23.4,
+      "duration_frames": 702,
+      "navigation_error": 3.9925748855794096,
+      "success_rate": 1.0,
+      "collision": 0.0,
+      "human_collision": 0.0,
+      "physical_collision": 0.0,
+      "spl": 1.0,
+      "path_length": 15.377585832001536,
+      "physical_collision_detected": false,
+      "physical_collision_count": 0
+    },
+    {
+      "episode": "episode_65",
+      "scene": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Simple_Warehouse/full_warehouse.usd",
+      "start": [
+        -10.22,
+        -7.36,
+        0.01
+      ],
+      "goal": [
+        -3.26,
+        7.61,
+        0.01
+      ],
+      "instruction": "Proceed to the yellow forklift at the entrance of Aisle 06 (the first aisle from the right).",
+      "timeout": 110,
+      "robot_type": "nova_carter",
+      "success": false,
+      "duration": 110.0,
+      "duration_frames": 3300,
+      "navigation_error": 6.260122223934883,
+      "success_rate": 0.0,
+      "collision": 1.0,
+      "human_collision": 1.0,
+      "physical_collision": 0.0,
+      "spl": 0.0,
+      "path_length": 61.952626455104536,
+      "physical_collision_detected": false,
+      "physical_collision_count": 20
+    }
+  ]
+}

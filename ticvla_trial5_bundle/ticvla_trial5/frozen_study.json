@@ -1,0 +1,1250 @@
+{
+  "alpha_plan": "two-sided familywise 0.05, Holm across two prespecified primary contrasts",
+  "attack": {
+    "arrival_interval_frames": 30,
+    "attack_service_frames": 120,
+    "drop_deadline_frames": 150,
+    "late_reference_frames": 150,
+    "max_attack_jobs": 64,
+    "off_frames": 900,
+    "on_frames": 180,
+    "warmup_frames": 3,
+    "work_budget_matching": "same six synthetic jobs x 120 virtual service frames per complete 1080 frame cycle; exact planned attack request count matched over each released episode horizon; observed delivered benign jobs may differ"
+  },
+  "blinded_interim_after_units": 60,
+  "clock": "30 simulation frames / simulation second",
+  "condition_order_seed": 20261018,
+  "conditions": [
+    "baseline",
+    "no_kv",
+    "yoyo_accept",
+    "yoyo_drop",
+    "flat_budget"
+  ],
+  "historical_discovery_excluded": [
+    20,
+    25,
+    45,
+    75,
+    85
+  ],
+  "interim_allowed": "re-estimate discordance and route-cluster dependence without condition identity or effect direction, apply frozen sample-size rule",
+  "meaningful_absolute_collision_increase": 0.15,
+  "new_seed_extension": "if needed, add prospective seeds 9006-9010 with same five-arm protocol, selected without opening outcome labels; analysis must account for clustering",
+  "pinned_trial4_base_commit": "9fa6f8b66b9e121d5df5df071297bba8e5353ebb",
+  "primary_contrasts": [
+    "yoyo_accept-baseline",
+    "yoyo_accept-yoyo_drop"
+  ],
+  "primary_outcome": "released binary collision = human root-distance under 0.2m OR physical sustained force >=10N for >=100 consecutive frames",
+  "primary_unit": "episode_seed (2 stochastic repeats nested)",
+  "replicates_per_episode_seed_condition": 2,
+  "route_families": 20,
+  "schema_version": "trial5-v1",
+  "seeds_per_episode": 5,
+  "status": "prospective_holdout",
+  "study_id": "T5_YOYO_CONFIRM_20261018",
+  "unique_episode_ids": 40,
+  "units": [
+    {
+      "episode": 52,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 34,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 72,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 7,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 39,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 57,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 14,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 64,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 4,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 34,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 72,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 57,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 49,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 12,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 74,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 54,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 79,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 53,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 12,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 37,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 60,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 24,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 64,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 32,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 56,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 24,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 84,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 34,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 77,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 37,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 22,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 53,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 62,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 37,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 54,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 24,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 67,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 60,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 4,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 49,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 32,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 7,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 51,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 69,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 55,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 39,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 69,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 24,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 57,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 47,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 64,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 19,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 82,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 47,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 2,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 52,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 54,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 17,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 77,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 34,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 27,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 52,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 12,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 82,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 59,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 2,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 44,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 72,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 51,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 84,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 19,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 27,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 74,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 59,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 34,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 17,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 62,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 14,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 58,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 27,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 47,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 67,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 19,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 59,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 64,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 22,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 57,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 49,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 56,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 37,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 84,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 4,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 52,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 74,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 9,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 37,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 51,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 22,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 32,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 67,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 27,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 14,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 74,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 56,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 9,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 52,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 74,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 47,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 56,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 29,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 2,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 67,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 77,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 39,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 56,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 17,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 55,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 79,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 42,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 12,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 82,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 29,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 14,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 53,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 59,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 29,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 4,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 79,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 9,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 58,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 29,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 84,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 57,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 44,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 69,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 22,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 24,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9001
+    },
+    {
+      "episode": 51,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 64,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9004
+    },
+    {
+      "episode": 44,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 44,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 54,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 22,
+      "family": "h5",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 82,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 44,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 7,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 84,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 55,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 47,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 19,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 79,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 60,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 27,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 77,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 9,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 53,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 9,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 32,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 62,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9003
+    },
+    {
+      "episode": 59,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 19,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 69,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 51,
+      "family": "u1",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 49,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 53,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 39,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 2,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9004
+    },
+    {
+      "episode": 67,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 62,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 60,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 7,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 42,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9003
+    },
+    {
+      "episode": 4,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 58,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 42,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9002
+    },
+    {
+      "episode": 62,
+      "family": "w1",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 58,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9001
+    },
+    {
+      "episode": 72,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 17,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 42,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 77,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 17,
+      "family": "h4",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 32,
+      "family": "o2",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 55,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9002
+    },
+    {
+      "episode": 72,
+      "family": "w3",
+      "scene": "warehouse",
+      "seed": 9005
+    },
+    {
+      "episode": 14,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 42,
+      "family": "o4",
+      "scene": "office",
+      "seed": 9004
+    },
+    {
+      "episode": 60,
+      "family": "u5",
+      "scene": "outdoor",
+      "seed": 9004
+    },
+    {
+      "episode": 54,
+      "family": "u2",
+      "scene": "outdoor",
+      "seed": 9003
+    },
+    {
+      "episode": 2,
+      "family": "h1",
+      "scene": "hospital",
+      "seed": 9005
+    },
+    {
+      "episode": 39,
+      "family": "o3",
+      "scene": "office",
+      "seed": 9005
+    },
+    {
+      "episode": 82,
+      "family": "w5",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 49,
+      "family": "o5",
+      "scene": "office",
+      "seed": 9001
+    },
+    {
+      "episode": 69,
+      "family": "w2",
+      "scene": "warehouse",
+      "seed": 9002
+    },
+    {
+      "episode": 12,
+      "family": "h3",
+      "scene": "hospital",
+      "seed": 9002
+    },
+    {
+      "episode": 55,
+      "family": "u3",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 79,
+      "family": "w4",
+      "scene": "warehouse",
+      "seed": 9001
+    },
+    {
+      "episode": 58,
+      "family": "u4",
+      "scene": "outdoor",
+      "seed": 9005
+    },
+    {
+      "episode": 7,
+      "family": "h2",
+      "scene": "hospital",
+      "seed": 9003
+    },
+    {
+      "episode": 29,
+      "family": "o1",
+      "scene": "office",
+      "seed": 9001
+    }
+  ]
+}
