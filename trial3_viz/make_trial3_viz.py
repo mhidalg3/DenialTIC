@@ -50,10 +50,10 @@ STALL_RADIUS_M = 0.5
 STALLED_SPEED = 0.05  # m/s
 MIN_BIN_EXPOSURE_MIN = 0.5
 AGE_BINS = np.array([0, 2.5, 5, 7.5, 10, 15, 20, 25, 30])
-# (episode, kind, key). ep75's permanent stall starts under the 22 s-old cache 2, before late
-# cache 3 arrives; the two human encounters happen only under yoyo; ep85's late cache 9 is
-# first used near the goal, after which the robot drives away.
-STORYBOARD_MOMENTS = ((75, "stall", "onset"), (75, "human", "Character_09"), (85, "human", "Character_12"),
+# (episode, kind, key). ep75's yoyo robot enters the 0.5 m region it never leaves while still using
+# the 22 s-old cache 2, before late cache 3 arrives; the two human encounters happen only under
+# yoyo; ep85's late cache 9 is first used near the goal, after which the robot drives away.
+STORYBOARD_MOMENTS = ((75, "final_region", "entry"), (75, "human", "Character_09"), (85, "human", "Character_12"),
                       (85, "cache", 9))
 VIDEO_EPISODES = (75, 85)
 
@@ -593,7 +593,7 @@ def fig_latency_binned(cells: dict, out: Path) -> None:
             ax.legend(fontsize=8, loc="upper right")
     fig.suptitle(
         "Within-run latency view — every frame of every baseline and yoyo run, binned by the age of the cache in use\n"
-        "Ages above ~5 s occur only under the yoyo attack and cluster after attack windows and inside stalls: "
+        "Ages above ~5 s occur only under the yoyo attack, whose queue flooding delays cache refresh: "
         "association, not a controlled dose-response",
         fontsize=12,
     )
@@ -699,7 +699,8 @@ def fig_collision_types(cells: dict, out: Path) -> None:
         for cond in CONDITIONS:
             c = cells[ep, cond]
             if c.physical_flag:
-                state = f"final-0.5 m stall from {c.stall / FPS:.0f} s" if c.stall is not None else "robot moving"
+                state = (f"inside final 0.5 m region from {c.stall / FPS:.0f} s" if c.stall is not None
+                         else "no final 0.5 m region")
                 end = c.physical_flag[0] - CONTACT_FRAMES + c.streak
                 flagged.append(f"  ep{ep} {LABEL[cond]}: {state}; flag at {c.physical_flag[1] / FPS:.0f} s; "
                                f"longest streak {c.streak} fr, implied end ≈ frame {end} of {c.n - 1}")
@@ -745,7 +746,7 @@ def storyboard(cells: dict, ep: int, kind: str, key, out: Path) -> None:
     else:
         frame = yoyo.stall
         cache_id = yoyo.cache_at(frame)
-        what = "the robot enters the final 0.5 m area it never leaves"
+        what = f"the robot enters the final 0.5 m region it never leaves (moving {yoyo.speed[frame]:.2f} m/s)"
     used_at, age_at_use = yoyo.first_use(cache_id)
     pub = yoyo.pubs[cache_id]
     pose = source_pose(yoyo.enq[cache_id])
@@ -874,7 +875,7 @@ def storyboard(cells: dict, ep: int, kind: str, key, out: Path) -> None:
                          Patch(color=ATTACK_COLOR, alpha=0.3), Patch(color=HUMAN_COLOR, alpha=0.4),
                          Line2D([], [], color=PHYSICAL_COLOR, lw=2), Line2D([], [], color="black", ls=":", lw=2)],
               l1 + l2 + ["moment shown", f"cache {cache_id} first used", "attack ON (yoyo)",
-                         "yoyo human encounter", "yoyo contact flag", "yoyo stall onset"],
+                         "yoyo human encounter", "yoyo contact flag", "yoyo enters final 0.5 m region"],
               fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.17), ncol=6, frameon=False)
 
     fig.suptitle(
@@ -1007,7 +1008,7 @@ def scene_video(cells: dict, ep: int, out: Path, step: int = 3) -> None:
         if c.physical_flag and f >= c.physical_flag[1]:
             lines.append(f"!! CONTACT FLAG (≥10 N for {CONTACT_FRAMES} frames)")
         if c.stall is not None and f >= c.stall:
-            lines.append("stalled")
+            lines.append("inside final 0.5 m region")
         return "\n".join(lines)
 
     w, h = fig.canvas.get_width_height()
